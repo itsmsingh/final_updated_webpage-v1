@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regression in Machine Learning</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Regression in Machine Learning</h1>
+    </header>
+    <main>
+        <section id="definitions">
+            <h2>What is Regression?</h2>
+            <p>Regression is a statistical method in machine learning used to model relationships between dependent and independent variables. It helps predict continuous values.</p>
+            
+            <h3>Types of Regression</h3>
+            <h4>Simple Linear Regression</h4>
+            <p>Models the relationship between a single independent variable (x) and a dependent variable (y) using the formula: <br> 
+               <strong>y = mx + c</strong></p>
+
+            <h4>Multiple Regression</h4>
+            <p>Extends linear regression by using multiple independent variables: <br> 
+               <strong>y = b0 + b1x1 + b2x2 + ... + bnxn</strong></p>
+
+            <h4>Polynomial Regression</h4>
+            <p>Handles non-linear relationships by introducing polynomial terms: <br> 
+               <strong>y = a + bx + cx² + dx³ + ...</strong></p>
+        </section>
+        
+        <section id="interactive">
+            <h2>Interactive Regression Graphs</h2>
+            <label for="regressionType">Select Regression Type:</label>
+            <select id="regressionType" onchange="updateChart()">
+                <option value="linear">Simple Linear Regression</option>
+                <option value="multiple">Multiple Regression</option>
+                <option value="polynomial">Polynomial Regression</option>
+            </select>
+            <canvas id="regressionChart" style="display: block; margin: auto; max-width: 300px; max-height: 300px;"></canvas>
+        </section>
+        
+        <section id="real-world">
+            <h2>Real-World Applications</h2>
+            <ul>
+                <li><strong>Finance:</strong> Regression is widely used in predicting stock market trends, risk assessment, and portfolio optimization.</li>
+                <li><strong>Healthcare:</strong> Used to forecast disease outbreaks, analyze medical test results, and predict patient recovery times.</li>
+                <li><strong>Marketing:</strong> Helps businesses analyze customer buying behavior, optimize ad spending, and improve pricing strategies.</li>
+            </ul>
+        </section>
+        
+        <section id="quiz">
+            <h2>Practice Questions</h2>
+            <p>1. What type of regression is best for modeling a straight-line relationship?</p>
+            <button onclick="checkAnswer('linear')">Simple Linear Regression</button>
+            <button onclick="checkAnswer('polynomial')">Polynomial Regression</button>
+            
+            <p>2. Which regression model can be used when there are multiple independent variables?</p>
+            <button onclick="checkAnswer('multiple')">Multiple Regression</button>
+            <button onclick="checkAnswer('linear')">Simple Linear Regression</button>
+
+            <p id="feedback"></p>
+        </section>
+        
+        <section id="resources">
+            <h2>Learn More</h2>
+            <ul>
+                <li><a href="https://www.datacamp.com" target="_blank">DataCamp</a></li>
+                <li><a href="https://towardsdatascience.com" target="_blank">Towards Data Science</a></li>
+                <li><a href="https://scikit-learn.org/stable/" target="_blank">Scikit-Learn Documentation</a></li>
+                <li><a href="https://www.kaggle.com/learn" target="_blank">Kaggle Courses</a></li>
+                <li><a href="https://www.coursera.org/courses?query=regression" target="_blank">Coursera Regression Courses</a></li>
+            </ul>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
